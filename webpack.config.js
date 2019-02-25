@@ -10,12 +10,11 @@ module.exports = {
         path: path.join(__dirname, 'dist/js'),
         filename: 'bundle.js'
     },
-
     module: {
-        loaders: [
+        rules: [ // 現在はloadersプロパティは使えないので注意
             {
                 test: /\.js$/, //変換対象ファイルの設定
-                exclude: /node_module/, // 対象外とするファイルの設定
+                exclude: /node_modules/, // 対象外とするファイルの設定
                 loader: 'babel-loader', // loaderの設定
                 query: {
                     presets: ['react', 'env']
@@ -24,7 +23,7 @@ module.exports = {
         ]
     },
     resolve: {
-        modules: [path.join(__dirname, 'src'), 'node_module'],
+        modules: [path.join(__dirname, 'src'), 'node_modules'],
         extensions: ['.js', '.jsx']
     }
 };
