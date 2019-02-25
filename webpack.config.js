@@ -17,7 +17,10 @@ module.exports = {
                 exclude: /node_modules/, // 対象外とするファイルの設定
                 loader: 'babel-loader', // loaderの設定
                 query: {
-                    presets: ['react', 'env']
+                    presets: [
+                        ['@babel/react'],
+                        ['@babel/env'],
+                    ]
                 }
             }
         ]
