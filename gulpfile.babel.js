@@ -12,7 +12,7 @@ gulp.task('build', function () {
             errorHandler: notify.onError('Error: <%= error.message %>')
         }))
         .pipe(webpack(webpackConfig))
-        .pipe(gulp.dest('dist.js'));
+        .pipe(gulp.dest('dist/js/'));
 });
 gulp.task('browser-sync', function () {
     browserSync.init({

@@ -18,8 +18,8 @@ module.exports = {
                 loader: 'babel-loader', // loaderの設定
                 query: {
                     presets: [
-                        ['@babel/react'],
-                        ['@babel/env'],
+                        ['react'],
+                        ['env'],
                     ]
                 }
             }
